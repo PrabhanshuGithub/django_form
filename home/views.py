@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse
-
+from datetime import datetime
+from home.models import Contact
 # Create your views here.
 
 ######################################
@@ -32,14 +33,17 @@ def aboutus(request):
 ## Function to call aboutus page template
 ######################################
 def ticket(request):
-    return render(request, 's.html')
+    return render(request, 'ticket.html')
 
 ######################################
 ## Function to call aboutus page template
 ######################################
-######################################
-## Function to call aboutus page template
-######################################
-######################################
-## Function to call aboutus page template
-######################################
+def forms(request):
+    if request.method=="POST":
+        first_name=request.POST.get('first_name')
+        last_name=request.POST.get('last_name')
+        email=request.POST.get('email')
+        password=request.POST.get('password')
+        contact=Contact(first_name=first_name,last_name=last_name,email=email,password=password,date=datetime.today())
+        contact.save()
+    return render(request, 'forms.html')

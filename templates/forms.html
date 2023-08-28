@@ -1,0 +1,52 @@
+{% extends 'base.html'%}
+{%block body %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+           
+<div class="row container mt-5" style="font-family: verdan; fond-size: 18px" >
+    <form class="col s12" method="post" action="#" >
+      {% csrf_token %}
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Placeholder" id="first_name" type="text" name="first_name" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate" name='last_name'>
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" name="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" name="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <div class="input-field inline">
+            <input id="email_inline" type="password" name="password" class="validate">
+            <label for="email_inline">Confirm Password</label>
+            <span class="helper-text" data-error="wrong" data-success="right"></span>
+
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+        
+{%endblock%}

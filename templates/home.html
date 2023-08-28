@@ -2,4 +2,24 @@
 {% block title %} Home {% endblock title %}
 
 
-{% block body %} This is a bloody Home page {%endblock body %}
+{% block body %} <div id="carouselExample" class="Container-fluid carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active" >
+      <img src="/static/image-2.jpg" width="100%" >
+    </div>
+    <div class="carousel-item">
+      <img src="/static/image-3.jpg" class="d-block" alt="..." width="100%" height="100%">
+    </div>
+    <div class="carousel-item">
+      <img src="/static/image-1.jpg" class="d-block" alt="..." width="100%" height="100%">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>This is a bloody Home page {%endblock body %}

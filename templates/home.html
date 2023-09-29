@@ -21,5 +21,14 @@
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
+
+
+
+
   </button>
+
+  {% for i in toRender %}
+
+<h1>{{ i.fullname }} {{i.last_name}}</h1>
+{%endfor%}
 </div>This is a bloody Home page {%endblock body %}

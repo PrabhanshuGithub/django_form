@@ -11,6 +11,7 @@ class Contact(models.Model):
     createdDate = models.DateTimeField(auto_now=True, null=True, default = timezone.now)
   
 
+
 class Ticket(models.Model):
     fullname = models.CharField(max_length=20)
     email = models.ForeignKey(Contact, on_delete=models.CASCADE)

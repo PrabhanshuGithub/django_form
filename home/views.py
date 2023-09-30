@@ -7,10 +7,6 @@ from home.models import Contact, Ticket
 ## Function to call home page template
 ######################################
 def firstFun(request):
-    toRender=Ticket.objects.all()
-    context={
-    "toRender":toRender
-    }
     return render(request,'home.html',context)
 
 ######################################
@@ -52,7 +48,7 @@ def ticket(request):
 ######################################
 def forms(request):
     if request.method=="POST":
-        first_name=request.POST.get('   ')
+        first_name=request.POST.get('first_name')
         last_name=request.POST.get('last_name')
         email=request.POST.get('email')
         password=request.POST.get('password')

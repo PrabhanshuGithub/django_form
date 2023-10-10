@@ -7,7 +7,7 @@ from home.models import Contact, Ticket
 ## Function to call home page template
 ######################################
 def firstFun(request):
-    return render(request,'home.html',context)
+    return render(request,'home.html')
 
 ######################################
 ## Function to call Documents page template

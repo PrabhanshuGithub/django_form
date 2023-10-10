@@ -8,11 +8,11 @@ class Contact(models.Model):
     last_name = models.CharField(max_length=20)
     email = models.EmailField(max_length=50)
     password = models.CharField(max_length=128)  # Use a CharField with enough length for hashed passwords
-    createdDate = models.DateTimeField(auto_now=True, null=True, default = timezone.now)
+    createdDate = models.DateTimeField(auto_now=True, null=True) # default = timezone.now
   
 
 
 class Ticket(models.Model):
     fullname = models.CharField(max_length=20)
     email = models.ForeignKey(Contact, on_delete=models.CASCADE)
-    createdDate = models.DateTimeField(auto_now=True, null=True, default = timezone.now)
+    createdDate = models.DateTimeField(auto_now=True, null=True) #, default = timezone.now
